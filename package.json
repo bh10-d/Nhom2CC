@@ -1,0 +1,23 @@
+{
+  "name": "nhom2pronhatlop",
+  "version": "1.0.0",
+  "description": "nhom2pronhatlop",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nhom2vippro"
+  ],
+  "author": "tan mot lan, hoa ham hoc, thinh cham hoc, hieu hoc dot",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
