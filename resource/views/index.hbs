@@ -10,15 +10,24 @@
     {{!-- evaluation context --}}
     <ul>
         {{!-- each helper interates an array --}}
-        {{!-- {{#each people}}
+        {{#each people}}
         <li>{{this}}</li>
-        {{/each}} --}}
+        {{/each}}
 
         {{!-- with helper dives into an object-property --}}
-        {{#with people}}
+        {{!-- {{#with people}}
         <li>{{nhom2}}</li>
         <li>{{lab}}</li>
-        {{/with}}
+        {{/with}} --}}
+
+        {{!-- without evaluation context using with object --}}
+        {{!-- <li>{{people.nhom2}}</li>
+        <li>{{people.lab}}</li> --}}
+
+        {{!-- changing the context --}}
+        {{!-- {{#each people}}
+            {{../prefix}} {{nhom2}}
+        {{/each}} --}}
     </ul>
 </body>
 </html>

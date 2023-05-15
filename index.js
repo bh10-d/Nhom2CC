@@ -1,6 +1,7 @@
 const http = require('http');
 const app = require("express")();
-var path = require("path");
+const path = require("path");
+
 
 // //view engine setup
 app.set("views", path.join(__dirname, "resource/views")); //setting views directory for views.
@@ -8,12 +9,23 @@ app.set("view engine", "hbs"); //setting view engine as handlebars
 
 app.get("/", (req, res) => {
 	let peopleList = getRandomList();
-	// res.render("index", { people: peopleList }); //passing list of people to our index.hbs file.
-	res.render("index", { people: {
-		"nhom2":"nhom2",
-		"lab": "cang day"
-	} }); //passing object-property
+	res.render("index", { people: peopleList }); //passing list of people to our index.hbs file.
+	
+	// res.render("index", { people: {
+	// 	"nhom2":"nhom2",
+	// 	"lab": "cang day"
+	// } }); //passing object-property
+
+	// 	res.render("index", { people: [
+	// 		{nhom2: "nhom2"},
+	// 		{nhom2: "cang day"}
+	// 	],
+	// prefix: "hello" });// changing the context
+	// res.statusCode = 200;
+	// res.setHeader('Content-Type', 'application/json');
+	// res.end("{message: 'nhom2'}")
 });
+
 let getRandomList = () => {
 	let list = ["ada", "turing", "lovelace", "neumann", "gracehopper"];
 	let limit = Math.floor(Math.random() * (list.length - 1 - 0) + 0); //generating random number between 0 & 4
